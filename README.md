@@ -1,6 +1,10 @@
-# study_vue
+# s4m0r1.net
 
-> My superior Nuxt.js project
+勉強のために自分の自己紹介サイトを作成しています。
+
+こここうしたほうがいいんじゃないの的なのあったらissueで投げてください。
+
+ものによってはやります
 
 ## Build Setup
 
