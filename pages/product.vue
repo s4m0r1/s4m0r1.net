@@ -111,7 +111,8 @@ export default {
     data() {
         return {
             isLoading: true,
-            fullPage: true
+            fullPage: true,
+            max: 5
         }
     },
     components: {
