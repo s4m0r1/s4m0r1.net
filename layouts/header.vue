@@ -18,8 +18,7 @@
 
 <script>
 export default {
-    props: {
-        title: "header"
-    }
+    props: ['header'],
+    layout: 'header'
 }
 </script>
