@@ -7,8 +7,11 @@
 </template>
 
 <script>
+import header from '~/layouts/header.vue'
+
 export default {
+    
     props: ['error'],
-    layout: 'error'
+    layout: 'header'
 }
 </script>
