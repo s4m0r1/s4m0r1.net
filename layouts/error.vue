@@ -1,16 +1,20 @@
 <template>
-    <div class="container">
-        <h1 v-if="error.statusCode === 404">ページがみつかりません</h1>
-        <h1 v-else>エラーが発生しました</h1>
-        <nuxt-link to="/">ホーム</nuxt-link>
+    <div class="jumbotron">
+        <h1 class="display-3">のっとふぁうんど</h1>
+        <p class="lead">そのようなページはありませんごめんなさい</p>
+        <hr class="my-2">
+        <p></p>
+        <p class="lead">
+            <a onclick="javascript:window.history.back(-1);return false;" class="btn btn-primary btn-lg" href="#" role="button">戻る</a>
+        </p>
     </div>
+
 </template>
 
 <script>
 import header from '~/layouts/header.vue'
 
 export default {
-    
     props: ['error'],
     layout: 'header'
 }
