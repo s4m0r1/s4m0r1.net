@@ -19,6 +19,7 @@
     "nuxt": "^2.0.0",
     "vue": "^2.6.10",
     "vue-loading-overlay": "^3.2.0",
+    "vue-server-renderer": "^2.6.10",
     "vue-spinner": "^1.0.3"
   },
   "devDependencies": {
