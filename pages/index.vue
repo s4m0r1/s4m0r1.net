@@ -1,7 +1,7 @@
 <template>
     <div class="jumbotron">
-        <h1 class="display-3">s4m0r1.netへようこそ</h1>
-        <p class="lead">ずっと工事中なのもなと作ってみましたまだ作り途中です</p>
+        <h1 class="display-3">s4m0r1.net[ß]へようこそ</h1>
+        <p class="lead">無限にβが取れないサイト</p>
         <hr class="my-2">
         <p></p>
         <p class="lead">
