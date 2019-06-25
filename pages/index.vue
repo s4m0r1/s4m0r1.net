@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid px-0">
         <div class="jumbotron">
-            <h1 class="display-3">s4m0r1.net<span class="beta-badge">ß</span></h1>
+            <h1 class="display-4">s4m0r1.net <span class="beta-badge">ß</span></h1>
             <p class="lead"><a href="https://twitter.com/s4m0r1">さもり</a>の自宅サーバーでうごいてるアレ</p>
             <hr class="my-2">
             <p>現状β版なのでいろいろおかしくなったりしますごめんなさい</p>
