@@ -1,6 +1,7 @@
 <template>
-    <!-- テンプレート -->
+    <p></p>
 </template>
+
 <script>
 export default {
     layout: 'blog'
