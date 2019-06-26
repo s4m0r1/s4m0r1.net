@@ -1,0 +1,18 @@
+{
+  "title": "テスト記事1",
+  "description": "テスト記事1です",
+  "tags": [
+    "タグ1"
+  ],
+  "category": "その他",
+  "created_at": "2019-02-16 00:08:00",
+  "updated_at": "2019-02-16 00:00:00",
+  "bodyContent": "# Hello World\n- Hello World\n\nいわゆるこんにちは",
+  "bodyHtml": "<h1>Hello World</h1>\n<ul>\n<li>Hello World</li>\n</ul>\n<p>いわゆるこんにちは</p>\n",
+  "preview": "Hello World\nHello World\n\nいわゆるこんにちは",
+  "dir": "contents/json",
+  "base": "2019-06-27-test002.json",
+  "ext": ".json",
+  "sourceBase": "2019-06-27-test002.md",
+  "sourceExt": ".md"
+}
