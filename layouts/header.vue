@@ -2,7 +2,7 @@
     <div>
         <section class="container-fluid px-0">
             <b-navbar toggleble="lg" type="dark" variant="dark">
-                <b-navbar-brand href="/">s4m0r1.net<span class="beta-badge">ß</span></b-navbar-brand>
+                <b-navbar-brand href="/">s4m0r1.net<span class="beta-badge">ß</span> [ver0.2.2]</b-navbar-brand>
                 <b-collaps id="nac-collapse" is-nav>
                     <b-navbar-nav>
                         <b-nav-item href="/about">About</b-nav-item>
