@@ -23,4 +23,13 @@ $ npm start
 $ npm run generate
 ```
 
+## ブログ新規ページ立ち上げ
+
+MarkDown形式で書いたブログは以下の形式でJSONを生成
+
+```bash
+# jsonとサマリーの作成
+processmd "contents/markdown/*.md" --preview 160 --stdout --outputDir contents/json > contents/summary.json
+```
+
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
