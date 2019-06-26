@@ -9,7 +9,10 @@
 </template>
 
 <script>
+    import header from '~/layouts/header.vue'
+
     export default {
+        layout: 'header',
         async asyncData() {
             const article = await import(`~/contents/json/2019-06-27-test002.json`)
             return {
