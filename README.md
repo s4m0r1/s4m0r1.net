@@ -29,6 +29,9 @@ MarkDown形式で書いたブログは以下の形式でJSONを生成
 
 ```bash
 # jsonとサマリーの作成
+npm run md
+
+# npm run md の中身
 processmd "contents/markdown/*.md" --preview 160 --stdout --outputDir contents/json > contents/summary.json
 ```
 
