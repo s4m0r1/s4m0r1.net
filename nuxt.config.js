@@ -38,8 +38,28 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    ['bootstrap-vue/nuxt', { css: false }]
+    ['bootstrap-vue/nuxt', { css: false }],
+    ['@nuxtjs/markdownit']
   ],
+
+  /*
+  ** markdownit
+  */
+  markdownit: {
+  preset: 'default',
+  linkify: false,
+  breaks: true,
+  html: true,
+  typegraphy: true,
+  injected: true,
+  use: [
+    'markdown-it-meta',
+    'markdown-it-highlightjs',
+    'markdown-it-table-of-contents',
+    'markdown-it-anchor'
+  ]
+},
+
   /*
   ** Build configuration
   */
