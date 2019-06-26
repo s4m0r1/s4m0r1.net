@@ -2,13 +2,15 @@
     <div class="container-fluid px-0">
         <div class="jumbotron">
             <h1 class="display-4">s4m0r1.net <span class="beta-badge">ß</span></h1>
-            <p class="lead"><a href="https://twitter.com/s4m0r1">さもり</a>ねっと</p>
+            <p class="lead"><a href="https://twitter.com/s4m0r1">さもり</a>どっとねっと</p>
             <hr class="my-2">
             <p>現状β版なのでいろいろおかしくなったりします。 ごめんなさい</p>
             <p class="lead">
                 <a class="btn btn-primary btn-lg" href="/about" role="button">About</a>
             </p>
+            
         </div>
+
     </div>
 </template>
 <script>
