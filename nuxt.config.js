@@ -1,3 +1,6 @@
+const fs = require('fs')
+const blogsSummary = JSON.parse(fs.readFileSync('contents/summary.json'))
+
 
 module.exports = {
   server: {
@@ -41,6 +44,12 @@ module.exports = {
     ['bootstrap-vue/nuxt', { css: false }],
     ['@nuxtjs/markdownit']
   ],
+  /*
+  ** env
+  */ 
+  env: {
+    summary: blogsSummary,
+  },
 
   /*
   ** markdownit
