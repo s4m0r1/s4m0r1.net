@@ -2,7 +2,7 @@
     <v-container>
         <v-layout column justify-center align-center>
             <v-flex xs12 sma12 md12 style="width: 100%">
-                <div class="ma-4 markdown-body" v-html="$md.render(article.bodyContent)" />
+                <!-- <div class="ma-4 markdown-body" v-html="$md.render(article[0].bodyContent)" /> -->
             </v-flex>
         </v-layout>
     </v-container>
