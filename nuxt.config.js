@@ -40,6 +40,21 @@ module.exports = {
   modules: [
     ['bootstrap-vue/nuxt', { css: false }]
   ],
+  rules: [
+    {
+      test: /\.md$/,
+      exclude: /(node_modules|bower_components)/,
+      use: [
+        'vue-loader',
+        {
+          loader: 'markdown-to-vue-loader',
+          options: {
+              exportSource: true    // この設定でMarkdownのRawデータを読み込めるようにする
+          },
+        },
+      ],
+    },
+  ],
   /*
   ** Build configuration
   */
