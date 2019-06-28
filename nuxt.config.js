@@ -38,23 +38,26 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    ['bootstrap-vue/nuxt', { css: false }]
+    ['bootstrap-vue/nuxt', { css: false }],
+    ['@nuxtjs/markdownit']
   ],
-  rules: [
-    {
-      test: /\.md$/,
-      exclude: /(node_modules|bower_components)/,
-      use: [
-        'vue-loader',
-        {
-          loader: 'markdown-to-vue-loader',
-          options: {
-              exportSource: true    // この設定でMarkdownのRawデータを読み込めるようにする
-          },
-        },
-      ],
-    },
-  ],
+  markdownit: {
+    preset: 'default',
+    injected: true, 
+    breaks: true, 
+    html: true, 
+    linkify: true,
+    typography: true, 
+    xhtmlOut: true,
+    langPrefix: 'language-',
+    quotes: '“”‘’',
+    highlight: function (/*str, lang*/) { return ''; },
+    use: [
+      'markdown-it-mark',
+      'markdown-it-footnote',
+      'markdown-it-block-embed'
+    ]
+  },
   /*
   ** Build configuration
   */
@@ -63,6 +66,8 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
+      const HardSourceWebpackPlugin = require('hard-source-webpack-plugin')
+      config.plugins.push(new HardSourceWebpackPlugin())
     }
   }
 }
