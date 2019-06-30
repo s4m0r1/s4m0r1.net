@@ -17,6 +17,7 @@
     "bootstrap-vue": "^2.0.0-rc.23",
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
+    "fs": "0.0.1-security",
     "hard-source-webpack-plugin": "^0.13.1",
     "markdown-it-block-embed": "0.0.3",
     "markdown-it-footnote": "^3.0.1",

@@ -39,7 +39,8 @@ module.exports = {
   */
   modules: [
     ['bootstrap-vue/nuxt', { css: false }],
-    ['@nuxtjs/markdownit']
+    ['@nuxtjs/markdownit'],
+    ['@nuxtjs/axios']
   ],
   markdownit: {
     preset: 'default',
