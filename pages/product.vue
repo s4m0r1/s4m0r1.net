@@ -1,135 +1,74 @@
 <template>
-    <div class=container>    
-        <div class="row">
-            <b-card
-                title="riamu-jihou"
-                img-src="https://assets.brandfolder.com/pmix53-32t4so-a6439g/view@2x.png?v=1549488833"
-                img-alt="Image"
-                img-top
-                tag="article"
-                style="max-width: 20rem;"
-                class="md-1"
-            >
-                <b-card-text>
-                    僕の活動場所であるラボは20時にでなければならないので５分前にラズパイで鳴らそうと思い作ったもの
-                    え？役にたたないとか言わないでPサマ！はー、やむ！！
-                </b-card-text>
-                <p>完成度</p>
-                <b-progress class="mb-2"  show-value>
-                    <b-progress-bar :value=50 show-progress animated></b-progress-bar>
-                </b-progress>
-                <b-button href="https://github.com/s4m0r1/riamu-jihou" variant="primary">GO Github</b-button>
-            </b-card>
-            <b-card
-                title="make_signage_pic"
-                img-src="https://user-images.githubusercontent.com/29473019/57278194-d29cfe00-70e0-11e9-9baf-e2e0e60efd00.png"
-                img-alt="Image"
-                img-top
-                tag="article"
-                style="max-width: 20rem;"
-                class="md-1"
-            >
-                <b-card-text class="md-1">
-                    学内デジタルサイネージ用画像を作成するためのPythonスクリプト
-                </b-card-text>
-                <p>完成度</p>
-                <b-progress class="mb-2" show-value>
-                    <b-progress-bar :value=30 show-progress animated></b-progress-bar>
-                </b-progress>
-                <b-button href="https://github.com/s4m0r1/make_signage_pic" variant="primary">GO Github</b-button>
-            </b-card>
-            <b-card
-                title="s4m0r1.net"
-                img-src="https://ja.nuxtjs.org/logos/nuxt-icon-white.png"
-                img-alt="Image"
-                img-top
-                tag="article"
-                style="max-width: 20rem;"
-                class="md-1"
-            >
-                <b-card-text class="md-1">
-                    このサイト初NuxtJSでやってみました。
-                    BootstrapのGridなどわからないままさわったけど案外どうにかなるものですねそれっぽいものはできました
-                </b-card-text>
-                <p>完成度</p>
-                <b-progress class="mb-2"  show-value>
-                    <b-progress-bar :value=10 show-progress animated></b-progress-bar>
-                </b-progress>
-                <b-button href="https://github.com/s4m0r1/s4m0r1.net_site" variant="primary">GO Github</b-button>
-            </b-card>
-                    <b-card
-                title="docker-clean"
-                img-src="https://upload.wikimedia.org/wikipedia/commons/7/79/Docker_%28container_engine%29_logo.png"
-                img-alt="Image"
-                img-top
-                tag="article"
-                style="max-width: 20rem;"
-                class="md-1"
-            >
-                <b-card-text class="md-1">
-                    DockerのImageなどを全削除するツール
-                    Goの練習がてら作成しました
-                    Dockerの検証してるとどんどんデーター溜まってストレージ圧迫すごいので全削除しようとすると手間がかかるのでなんとなく作ってみました
-                </b-card-text>
-                <p>完成度</p>
-                <b-progress class="mb-2"  show-value>
-                    <b-progress-bar :value=20 show-progress animated></b-progress-bar>
-                </b-progress>
-                <b-button href="https://github.com/s4m0r1/docker-clean" variant="primary">GO Github</b-button>
-            </b-card>
-            <b-card
-                title="emoji-nonfitication"
-                img-src="https://assets.brandfolder.com/pmix53-32t4so-a6439g/view@2x.png?v=1549488833"
-                img-alt="Image"
-                img-top
-                tag="article"
-                style="max-width: 20rem;"
-                class="md-1"
-            >
-                <b-card-text class="md-1">
-                    Slackに絵文字が追加されたらメッセージ送信するLambda
-                    なんだかんだないので作ってみた
-                    環境変数にTokenとChannelを指定するだけ！めっちゃ簡単！
-                    なんだかんだ初のライセンス適用してみたやつ
-                </b-card-text>
-                <p>完成度</p>
-                <b-progress class="mb-2"  show-value>
-                    <b-progress-bar :value=90 show-progress animated></b-progress-bar>
-                </b-progress>
-                <b-button href="https://github.com/s4m0r1/emoji-nonfitication" variant="primary">GO Github</b-button>
-            </b-card>
+    <div class=container>
+        <br>
+        <h1>💊Product💊</h1>
+        <hr>
+        <div class="row row-eq-height">
+        <b-card v-for='item in items' :key='item.name' style="max-width: 20rem;" class="md-1 border-primary" header-tag="header" footer-tag="footer">
+            <h2 class="repo_name" slot="header">{{ item.name }}</h2>
+            <div class="git_badge">
+                <b-badge variant="warning">
+                    Star
+                    <b-badge pill variant="light">{{ item.stargazers_count }}</b-badge>
+                </b-badge>
+                <b-badge variant="primary">
+                    forks
+                    <b-badge pill variant="light">{{ item.forks_count }}</b-badge>
+                </b-badge>
+                <b-badge variant="success">
+                    watchers
+                    <b-badge pill variant="light">{{ item.watchers_count }}</b-badge>
+                </b-badge>
+            </div>
+            <b-card-text>{{ item.description }}</b-card-text>
+            <b-button :href="item.html_url" class="go_git_button" variant="primary" slot="footer">Go Github</b-button>
+        </b-card>
+        </div>
     </div>
-</div>
 </template>
 
 <script>
-import header from '~/layouts/header.vue';
-import Loading from 'vue-loading-overlay';
-import 'vue-loading-overlay/dist/vue-loading.css'
+import header from '~/layouts/header.vue'
+import axios from '@nuxtjs/axios'
 export default {
-    layout: 'header',
-    data() {
-        return {
-            isLoading: true,
-            fullPage: true,
-        }
-    },
-    components: {
-        Loading
-    },
-    methods: {
-        mounted() {
-            window:addEventListener("load", function() {
-            this.isLoading = true;
-        }, false)
-
-        },
+    layout: "header",
+    async asyncData({ app }) {
+        const items = await app.$axios.$get('https://api.github.com/users/s4m0r1/repos');
+    return { items };
     }
 }
 </script>
 
-<style>
+<style lang="css">
+.border-primary {
+    background-color: crimson;
+}
+.row-eq-height {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 .md-1 {
-    margin: 1%
+    width: 100%;
+    margin: 1%;
+}
+.card-header {
+    background-color: rgb(248,182,207);
+}
+.repo_name{
+    color: rgb(114, 1, 129);
+}
+.card-body {
+    padding: 1% 5% 5%;
+    background-color: rgb(247, 247, 247);
+}
+.card-footer {
+    background-color: rgb(109,218,226);
+}
+.go_git_button {
+    float: right;
+}
+.git_badge {
+    padding: 1% 0% 2% ;
 }
 </style>
