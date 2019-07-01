@@ -28,18 +28,25 @@
 </template>
 
 <script>
-import header from '~/layouts/header.vue'
 import axios from '@nuxtjs/axios'
 export default {
-    layout: "header",
     async asyncData({ app }) {
-        const items = await app.$axios.$get('https://api.github.com/users/s4m0r1/repos');
+        const api_url = "https://api.github.com/users/s4m0r1/repos?client_id=" + process.env.GITHUB_ID + "&client_secret=" + process.env.GITHUB_SEC
+        const items = await app.$axios.$get(api_url);
     return { items };
     }
 }
 </script>
 
 <style lang="css">
+.container {
+    position: relative;
+    width: 100%;
+    height: auto !important;
+    height: 100%;
+    min-height: 100%;
+    margin: auto auto 5% auto;
+}
 .border-primary {
     background-color: crimson;
 }

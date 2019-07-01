@@ -1,4 +1,8 @@
 
+require('dotenv').config();
+const { GITHUB_ID } = process.env;
+const { GITHUB_SEC } = process.env;
+
 module.exports = {
   server: {
     port: 3000,
@@ -70,5 +74,9 @@ module.exports = {
       const HardSourceWebpackPlugin = require('hard-source-webpack-plugin')
       config.plugins.push(new HardSourceWebpackPlugin())
     }
+  },
+  env: {
+    GITHUB_ID,
+    GITHUB_SEC
   }
 }
