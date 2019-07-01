@@ -1,55 +1,63 @@
 <template>
   <div>
-    <nuxt />
+    <section class="container-fluid px-0">
+      <b-navbar toggleble="lg" type="dark" variant="dark">
+        <b-navbar-brand href="/">s4m0r1.net<span class="beta-badge">ß</span></b-navbar-brand>
+        <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+        <b-collaps id="nac-collapse" is-nav>
+          <b-navbar-nav>
+            <b-nav-item href="/about">About</b-nav-item>
+            <b-nav-item href="/product">Product</b-nav-item>
+          </b-navbar-nav>
+        </b-collaps>
+      </b-navbar>
+    </section>
+    <!-- ここまでヘッダー -->
+      <nuxt class="nuxt_body" />
+    <!-- ここからフッター -->
+    <footer>
+          <center class="site_title"><p>s4m0r1.net</p></center>
+          <center class="copy_light"><small>© 2019 さもり</small></center>
+          <a class="version_link" href="/release">Ver:0.3.1</a>
+    </footer>
   </div>
 </template>
 
+<script>
+export default {
+    props: ['default'],
+    layout: 'default'
+}
+</script>
+
 <style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #000000;
 }
+.site_title {
+  position: absolute;
+  color: aliceblue;
+  bottom: 1%;
+  width: 100%;
+  margin: auto auto 1% auto;
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
 }
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+.copy_light {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  bottom: 1%;
+  width: 100%;
 }
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+.version_link {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  width: 100%;
+  bottom: 1%;
+  text-align: right;
 }
 </style>
