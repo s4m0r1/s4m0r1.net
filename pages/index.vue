@@ -13,13 +13,6 @@
 
     </div>
 </template>
-<script>
-    import header from '~/layouts/header.vue'
-
-    export default {
-        layout: 'header'
-    }
-</script>
 
 <style>
     .beta-badge,

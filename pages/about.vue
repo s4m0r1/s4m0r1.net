@@ -16,15 +16,13 @@
     </section>
 </template>
 
-<script>
-import header from '~/layouts/header.vue'
-
-export default {
-    layout: 'header'
-}
-</script>
-
 <style>
+.container-fluid {
+    position: relative;
+    height: auto !important;
+    height: 100%;
+    min-height: 100%;
+}
 .danger {
     display: flex;
     justify-content: center;
