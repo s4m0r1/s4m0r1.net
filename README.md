@@ -21,6 +21,19 @@ $ npm start
 
 # generate static project
 $ npm run generate
+
+# hardcache clean
+$ npm run rmcache
 ```
+
+## 環境変数
+```
+環境変数をセットしないと正しく動作しません
+```
+
+|環境変数名|備考|
+|:--|:-:|
+|GITHUB_ID||
+|GITHUB_SEC||
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
