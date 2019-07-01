@@ -15,7 +15,7 @@
     <!-- ここまでヘッダー -->
       <nuxt class="nuxt_body" />
     <!-- ここからフッター -->
-    <footer>
+    <footer class="default_footer">
           <center class="site_title"><p>s4m0r1.net</p></center>
           <center class="copy_light"><small>© 2019 さもり</small></center>
           <a class="version_link" href="/release">Ver:0.4.2</a>
@@ -31,7 +31,7 @@ export default {
 </script>
 
 <style>
-footer {
+.default_footer {
   position: fixed;
   bottom: 0;
   width: 100%;
