@@ -2,6 +2,7 @@
 require('dotenv').config();
 const { GITHUB_ID } = process.env;
 const { GITHUB_SEC } = process.env;
+const { QIITA_TOKEN } = process.env;
 
 module.exports = {
   server: {
@@ -77,6 +78,7 @@ module.exports = {
   },
   env: {
     GITHUB_ID,
-    GITHUB_SEC
+    GITHUB_SEC,
+    QIITA_TOKEN
   }
 }
