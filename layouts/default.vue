@@ -8,6 +8,7 @@
           <b-navbar-nav>
             <b-nav-item href="/about">About</b-nav-item>
             <b-nav-item href="/product">Product</b-nav-item>
+            <b-nav-item href="/qiita">Qiita</b-nav-item>
           </b-navbar-nav>
         </b-collaps>
       </b-navbar>
