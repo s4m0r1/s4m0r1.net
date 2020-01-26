@@ -1,5 +1,6 @@
 <template>
   <div>
+    <link rel="apple-touch-icon" href="~/assets/icon/ios.png" />
     <section class="container-fluid px-0">
       <b-navbar toggleble="lg" type="dark" variant="dark">
         <b-navbar-brand href="/">s4m0r1.net<span class="beta-badge">ß</span></b-navbar-brand>
