@@ -21,6 +21,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
+      { rel: 'apple-touch-icon', href: "/ios.png"},
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
