@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "markdown-to-vue-loader": "^1.0.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "nodemon": "^1.19.4",
     "sass-loader": "^7.3.1",
     "vue-loader": "^15.8.3",
